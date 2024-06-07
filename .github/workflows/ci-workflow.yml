@@ -27,4 +27,4 @@ jobs:
       working-directory: ./customer
       run: |
         npm ci
-        npm run test
+        npm run jest
