@@ -3,7 +3,7 @@ const { DB_URL } = require('../config');
 
 module.exports = async() => {
     try {
-        console.log(DB_URL, 'DATABASE URL')
+        console.log(DB_URL, 'DATABASE URL Product')
         await mongoose.connect(DB_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
