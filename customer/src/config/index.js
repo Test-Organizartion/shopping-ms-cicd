@@ -1,12 +1,12 @@
 const dotEnv = require("dotenv");
 const path = require('path');
-if (process.env.NODE_ENV !== "prod") {
-  const configFile = `../../.env.dev`;
-  // dotEnv.config({ path: path.resolve(__dirname, `../../.env.${process.env.NODE_ENV}`) });
-  dotEnv.config({ path: path.resolve(__dirname, configFile) });
-} else {
+// if (process.env.NODE_ENV !== "prod") {
+//   const configFile = `../../.env.dev`;
+//   // dotEnv.config({ path: path.resolve(__dirname, `../../.env.${process.env.NODE_ENV}`) });
+//   dotEnv.config({ path: path.resolve(__dirname, configFile) });
+// } else {
   dotEnv.config();
-}
+// }
 module.exports = {
   PORT: process.env.PORT,
   DB_URL: process.env.MONGODB_URI,
