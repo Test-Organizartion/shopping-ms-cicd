@@ -8,7 +8,7 @@ const path = require('path');
   dotEnv.config();
 // }
 
-console.log(process.env.MONGODB_URI, process.env.NODE_ENV)
+console.log(process.env.MONGODB_URI)
 module.exports = {
   PORT: process.env.PORT,
   DB_URL: process.env.MONGODB_URI,
