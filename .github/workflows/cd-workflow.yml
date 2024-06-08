@@ -43,13 +43,13 @@ jobs:
         run: |
           zip -r deploy.zip . -x '*.git*'
 
-      # - name: Deploy on Elastic Beanstalk QA env
-      #   uses: einaregilsson/beanstalk-deploy@v20
-      #   with: 
-      #     aws_access_key: ${{secret.AWS_Access_key_ID}}
-      #     aws_secret_key: ${{secret.AWS_Secret_access_key}}
-      #     application_name: microservice-cicd
-      #     environment_name: microservice-cicd-env-1
-      #     version_label: ver-${{github.sha}}
-      #     region: us-east-1
-      #     deployment_package: deploy.zip
+      - name: Deploy on Elastic Beanstalk QA env
+        uses: einaregilsson/beanstalk-deploy@v20
+        with: 
+          aws_access_key: ${{secret.AWS_Access_key_ID}}
+          aws_secret_key: ${{secret.AWS_Secret_access_key}}
+          application_name: microservice-cicd
+          environment_name: microservice-cicd-env-1
+          version_label: ver-${{github.sha}}
+          region: us-east-1
+          deployment_package: deploy.zip
