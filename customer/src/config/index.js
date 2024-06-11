@@ -5,7 +5,8 @@ if (process.env.NODE_ENV === "dev") {
   // dotEnv.config({ path: path.resolve(__dirname, `../../.env.${process.env.NODE_ENV}`) });
   dotEnv.config({ path: path.resolve(__dirname, configFile) });
 } else {
-  dotEnv.config();
+  const configFile = `../../.env`;
+  dotEnv.config({ path: path.resolve(__dirname, configFile) });
 }
 module.exports = {
   PORT: process.env.PORT,
