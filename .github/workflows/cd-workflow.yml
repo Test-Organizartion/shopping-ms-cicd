@@ -49,7 +49,7 @@ jobs:
           aws_access_key: ${{secrets.AWS_Access_key_ID}}
           aws_secret_key: ${{secrets.AWS_Secret_access_key}}
           application_name: microservice-cicd
-          environment_name: Microservice-cicd-env
+          environment_name: Microservice-cicd-env-1
           version_label: ver-${{github.sha}}
           region: us-east-1
           deployment_package: deploy.zip
