@@ -87,4 +87,4 @@ services:
       - shopping
       - customer
     ports:
-      - 8888:80
+      - 80:80
