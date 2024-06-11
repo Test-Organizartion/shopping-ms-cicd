@@ -5,7 +5,7 @@ const path = require('path');
 //   // dotEnv.config({ path: path.resolve(__dirname, `../../.env.${process.env.NODE_ENV}`) });
 //   dotEnv.config({ path: path.resolve(__dirname, configFile) });
 // } else {
-  // dotEnv.config();
+  // dotEnv.config();//
 // }
 module.exports = {
   PORT: process.env.PORT,
