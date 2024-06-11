@@ -15,7 +15,7 @@ const StartServer = async() => {
     await expressApp(app, channel);
 
     app.listen(PORT, () => {
-        console.log(`listening to port ${PORT}`);
+        console.log(`listening to port ${PORT}, & environment is ${process.env.NODE_ENV}`);
     })
     .on('error', (err) => {
         console.log(err);
